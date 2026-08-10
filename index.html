@@ -28,11 +28,12 @@
     <!-- End Meta Pixel Code -->
 
     <style>
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #f8fafc;
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f8fafc;
         }
         
         /* Shimmer Animation */
@@ -72,9 +73,9 @@
         }
     </style>
 </head>
-<body class="flex justify-center items-center py-3 px-3 sm:py-6 sm:px-4">
+<body class="flex justify-center items-center min-h-screen p-3 sm:p-4">
 
-    <div class="bg-white rounded-3xl shadow-xl border border-slate-100 max-w-md w-full p-4 sm:p-6 flex flex-col items-center text-center space-y-4 sm:space-y-5">
+    <div class="bg-white rounded-3xl shadow-xl border border-slate-100 max-w-md w-full p-4 sm:p-6 flex flex-col items-center text-center space-y-3.5 sm:space-y-4 my-auto">
         
         <!-- Top Badges (Forced Side-by-Side in Single Line) -->
         <div class="flex flex-row flex-nowrap justify-center items-center gap-1.5 w-full overflow-hidden">
@@ -94,7 +95,7 @@
             <p class="text-3xl sm:text-4xl font-black text-blue-600 tracking-tight leading-tight pt-1">
                 ₹25,000 – ₹35,000
             </p>
-            <h2 class="text-xl sm:text-2xl font-extrabold text-slate-800 flex items-center justify-center gap-1.5 pt-1">
+            <h2 class="text-xl sm:text-2xl font-extrabold text-slate-800 flex items-center justify-center gap-1.5 pt-0.5">
                 Handwriting Job ✍️
             </h2>
         </div>
@@ -106,10 +107,10 @@
 
         <!-- Feature Badges (Sleek & Clean Fit - Not Bulky) -->
         <div class="grid grid-cols-2 gap-2 w-full">
-            <div class="flex items-center justify-center gap-1.5 px-2 py-2 rounded-full text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 whitespace-nowrap">
+            <div class="flex items-center justify-center gap-1.5 px-2 py-1.5 rounded-full text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 whitespace-nowrap">
                 <i data-lucide="circle-check-big" class="w-3.5 h-3.5 text-emerald-600 shrink-0"></i> 50% Advance
             </div>
-            <div class="flex items-center justify-center gap-1.5 px-2 py-2 rounded-full text-xs font-bold text-blue-700 bg-blue-50 border border-blue-200 whitespace-nowrap">
+            <div class="flex items-center justify-center gap-1.5 px-2 py-1.5 rounded-full text-xs font-bold text-blue-700 bg-blue-50 border border-blue-200 whitespace-nowrap">
                 <i data-lucide="truck" class="w-3.5 h-3.5 text-blue-600 shrink-0"></i> Free Home Delivery
             </div>
         </div>
@@ -119,7 +120,7 @@
         </div>
 
         <!-- CTA Button 1 -->
-        <a href="#" onclick="trackAndRedirect(event)" class="btn-shine animate-pulse-subtle w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-black py-3.5 px-5 rounded-full shadow-lg shadow-blue-500/30 transition duration-200 group text-base">
+        <a href="#" onclick="trackAndRedirect(event)" class="btn-shine animate-pulse-subtle w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-black py-3 px-5 rounded-full shadow-lg shadow-blue-500/30 transition duration-200 group text-base">
             <i data-lucide="send" class="w-5 h-5 fill-white shrink-0"></i> Apply Now on Telegram 
             <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1 shrink-0"></i>
         </a>
@@ -136,7 +137,7 @@
         </div>
 
         <!-- Pricing Card -->
-        <div class="w-full border border-blue-200 bg-blue-50/30 rounded-2xl p-3.5 divide-y divide-blue-100">
+        <div class="w-full border border-blue-200 bg-blue-50/30 rounded-2xl p-3 divide-y divide-blue-100">
             <div class="flex justify-between items-center pb-2">
                 <div class="flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-slate-800">
                     💰 <span>Weekly Payment</span>
@@ -152,7 +153,7 @@
         </div>
 
         <!-- Grid Highlights -->
-        <div class="grid grid-cols-2 gap-y-3 gap-x-2 w-full text-left px-1">
+        <div class="grid grid-cols-2 gap-y-2.5 gap-x-2 w-full text-left px-1">
             <div class="flex items-center gap-2">
                 <i data-lucide="indian-rupee" class="w-4 h-4 text-emerald-600 shrink-0"></i>
                 <span class="text-xs font-bold text-slate-800">₹2.5 Cr+ Paid</span>
@@ -172,7 +173,7 @@
         </div>
 
         <!-- CTA Button 2 -->
-        <a href="#" onclick="trackAndRedirect(event)" class="btn-shine animate-pulse-subtle w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-black py-3.5 px-5 rounded-full shadow-lg shadow-blue-500/30 transition duration-200 group text-base">
+        <a href="#" onclick="trackAndRedirect(event)" class="btn-shine animate-pulse-subtle w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-black py-3 px-5 rounded-full shadow-lg shadow-blue-500/30 transition duration-200 group text-base">
             <i data-lucide="send" class="w-5 h-5 fill-white shrink-0"></i> Apply Now — Get ₹30,000 
             <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1 shrink-0"></i>
         </a>
