@@ -31,6 +31,8 @@
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background-color: #f8fafc;
+            margin: 0;
+            padding: 0;
         }
         
         /* Shimmer Animation */
@@ -70,98 +72,109 @@
         }
     </style>
 </head>
-<body class="flex justify-center items-center min-h-screen p-4 sm:p-6">
+<body class="min-h-screen flex justify-center items-center p-3 sm:p-4">
 
-    <div class="bg-white rounded-3xl shadow-xl border border-slate-100 max-w-md w-full p-6 flex flex-col items-center text-center space-y-6">
+    <div class="bg-white rounded-3xl shadow-xl border border-slate-100 max-w-md w-full p-5 sm:p-7 flex flex-col items-center text-center space-y-5 my-auto">
         
-        <div class="flex flex-wrap justify-center gap-2 w-full">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-blue-600 bg-blue-50 border border-blue-200">
+        <!-- Top Badges -->
+        <div class="flex flex-row flex-wrap justify-center items-center gap-2 w-full">
+            <span class="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-blue-600 bg-blue-50 border border-blue-200 whitespace-nowrap">
                 <i data-lucide="sparkles" class="w-3.5 h-3.5 text-blue-500"></i> Genuine Work From Home
             </span>
-            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-pink-600 bg-pink-50 border border-pink-200">
+            <span class="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-pink-600 bg-pink-50 border border-pink-200 whitespace-nowrap">
                 👩 Females Preferred
             </span>
         </div>
 
-        <div class="space-y-1">
-            <h1 class="text-3xl font-black text-slate-900 tracking-tight">Ghar Baithe Kamao</h1>
-            <p class="text-3xl sm:text-4xl font-black text-blue-600 tracking-tight">₹25,000 – ₹35,000</p>
-            <h2 class="text-xl font-bold text-slate-800 flex items-center justify-center gap-1">
+        <!-- Headings (Main Heading Text Size Increased & Optimized) -->
+        <div class="space-y-2 w-full">
+            <h1 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight leading-none">
+                Ghar Baithe Kamao
+            </h1>
+            <p class="text-3xl sm:text-4xl font-black text-blue-600 tracking-tight leading-tight pt-1">
+                ₹25,000 – ₹35,000
+            </p>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800 flex items-center justify-center gap-1.5 pt-1">
                 Handwriting Job ✍️
             </h2>
         </div>
 
-        <p class="text-sm font-medium text-slate-500 max-w-sm leading-relaxed px-2">
+        <!-- Description -->
+        <p class="text-sm sm:text-base font-semibold text-slate-600 max-w-xs sm:max-w-sm leading-snug px-1">
             Simple copywriting kaam. No experience needed. Blank pages ghar aayenge, aap likh ke bhejo, paisa UPI me.
         </p>
 
-        <div class="grid grid-cols-2 gap-3 w-full">
-            <div class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-full text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200">
-                <i data-lucide="circle-check-big" class="w-4 h-4 text-emerald-600"></i> 50% Advance
+        <!-- Feature Badges -->
+        <div class="grid grid-cols-2 gap-2.5 w-full">
+            <div class="flex items-center justify-center gap-1.5 px-2.5 py-2.5 rounded-2xl text-xs sm:text-sm font-bold text-emerald-700 bg-emerald-50 border border-emerald-200">
+                <i data-lucide="circle-check-big" class="w-4 h-4 text-emerald-600 shrink-0"></i> 50% Advance
             </div>
-            <div class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-full text-sm font-semibold text-blue-700 bg-blue-50 border border-blue-200">
-                <i data-lucide="truck" class="w-4 h-4 text-blue-600"></i> Free Home Delivery
+            <div class="flex items-center justify-center gap-1.5 px-2.5 py-2.5 rounded-2xl text-xs sm:text-sm font-bold text-blue-700 bg-blue-50 border border-blue-200">
+                <i data-lucide="truck" class="w-4 h-4 text-blue-600 shrink-0"></i> Free Home Delivery
             </div>
         </div>
 
-        <div class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold text-amber-600 bg-amber-50 border border-amber-200">
+        <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold text-amber-600 bg-amber-50 border border-amber-200">
             <i data-lucide="flame" class="w-4 h-4 text-amber-500 fill-amber-500"></i> Limited Slots
         </div>
 
         <!-- CTA Button 1 -->
-        <a href="#" onclick="trackAndRedirect(event)" class="btn-shine animate-pulse-subtle w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-full shadow-lg shadow-blue-500/30 transition duration-200 group text-base">
-            <i data-lucide="send" class="w-5 h-5 fill-white"></i> Apply Now on Telegram 
-            <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1"></i>
+        <a href="#" onclick="trackAndRedirect(event)" class="btn-shine animate-pulse-subtle w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-black py-4 px-5 rounded-full shadow-lg shadow-blue-500/30 transition duration-200 group text-base sm:text-lg">
+            <i data-lucide="send" class="w-5 h-5 fill-white shrink-0"></i> Apply Now on Telegram 
+            <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1 shrink-0"></i>
         </a>
 
-        <div class="flex items-center justify-center gap-3 w-full text-xs font-medium text-slate-500">
-            <div class="flex -space-x-2">
+        <!-- Proof Banner -->
+        <div class="flex items-center justify-center gap-2.5 w-full text-xs font-semibold text-slate-600">
+            <div class="flex -space-x-2 shrink-0">
                 <span class="w-6 h-6 rounded-full bg-pink-500 text-white flex items-center justify-center font-bold border-2 border-white text-[10px]">P</span>
                 <span class="w-6 h-6 rounded-full bg-amber-500 text-white flex items-center justify-center font-bold border-2 border-white text-[10px]">S</span>
                 <span class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold border-2 border-white text-[10px]">A</span>
                 <span class="w-6 h-6 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold border-2 border-white text-[10px]">R</span>
             </div>
-            <span><strong class="text-slate-700">1000+</strong> women already earning</span>
+            <span><strong class="text-slate-800 font-bold">1000+</strong> women already earning</span>
         </div>
 
-        <div class="w-full border border-blue-200 bg-blue-50/30 rounded-2xl p-4 divide-y divide-blue-100">
-            <div class="flex justify-between items-center pb-3">
-                <div class="flex items-center gap-2 text-sm font-semibold text-slate-800">
+        <!-- Pricing Card -->
+        <div class="w-full border border-blue-200 bg-blue-50/40 rounded-2xl p-3.5 sm:p-4 divide-y divide-blue-100">
+            <div class="flex justify-between items-center pb-2.5">
+                <div class="flex items-center gap-1.5 text-xs sm:text-sm font-bold text-slate-800">
                     💰 <span>Weekly Payment</span>
                 </div>
-                <span class="text-base font-bold text-blue-600">₹25,000</span>
+                <span class="text-base sm:text-lg font-black text-blue-600">₹25,000</span>
             </div>
-            <div class="flex justify-between items-center pt-3">
-                <div class="flex items-center gap-2 text-sm font-semibold text-slate-800">
+            <div class="flex justify-between items-center pt-2.5">
+                <div class="flex items-center gap-1.5 text-xs sm:text-sm font-bold text-slate-800">
                     💰 <span>10 Days Payment</span>
                 </div>
-                <span class="text-base font-bold text-blue-600">₹30,000</span>
+                <span class="text-base sm:text-lg font-black text-blue-600">₹30,000</span>
             </div>
         </div>
 
-        <div class="grid grid-cols-2 gap-y-4 gap-x-2 w-full text-left px-2">
-            <div class="flex items-center gap-2.5">
-                <i data-lucide="indian-rupee" class="w-5 h-5 text-emerald-600"></i>
-                <span class="text-xs font-bold text-slate-800">₹2.5 Cr+ Paid</span>
+        <!-- Grid Highlights -->
+        <div class="grid grid-cols-2 gap-y-3.5 gap-x-2 w-full text-left px-1">
+            <div class="flex items-center gap-2">
+                <i data-lucide="indian-rupee" class="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0"></i>
+                <span class="text-xs sm:text-sm font-extrabold text-slate-800">₹2.5 Cr+ Paid</span>
             </div>
-            <div class="flex items-center gap-2.5">
-                <i data-lucide="users" class="w-5 h-5 text-blue-600"></i>
-                <span class="text-xs font-bold text-slate-800">1000+ Writers</span>
+            <div class="flex items-center gap-2">
+                <i data-lucide="users" class="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 shrink-0"></i>
+                <span class="text-xs sm:text-sm font-extrabold text-slate-800">1000+ Writers</span>
             </div>
-            <div class="flex items-center gap-2.5">
-                <i data-lucide="shield-check" class="w-5 h-5 text-orange-500"></i>
-                <span class="text-xs font-bold text-slate-800">Govt. Approved</span>
+            <div class="flex items-center gap-2">
+                <i data-lucide="shield-check" class="w-4 h-4 sm:w-5 sm:h-5 text-orange-500 shrink-0"></i>
+                <span class="text-xs sm:text-sm font-extrabold text-slate-800">Govt. Approved</span>
             </div>
-            <div class="flex items-center gap-2.5">
-                <i data-lucide="lock" class="w-5 h-5 text-purple-600"></i>
-                <span class="text-xs font-bold text-slate-800">100% Safe</span>
+            <div class="flex items-center gap-2">
+                <i data-lucide="lock" class="w-4 h-4 sm:w-5 sm:h-5 text-purple-600 shrink-0"></i>
+                <span class="text-xs sm:text-sm font-extrabold text-slate-800">100% Safe</span>
             </div>
         </div>
 
         <!-- CTA Button 2 -->
-        <a href="#" onclick="trackAndRedirect(event)" class="btn-shine animate-pulse-subtle w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-full shadow-lg shadow-blue-500/30 transition duration-200 group text-base">
-            <i data-lucide="send" class="w-5 h-5 fill-white"></i> Apply Now — Get ₹30,000 
-            <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1"></i>
+        <a href="#" onclick="trackAndRedirect(event)" class="btn-shine animate-pulse-subtle w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-black py-4 px-5 rounded-full shadow-lg shadow-blue-500/30 transition duration-200 group text-base sm:text-lg">
+            <i data-lucide="send" class="w-5 h-5 fill-white shrink-0"></i> Apply Now — Get ₹30,000 
+            <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1 shrink-0"></i>
         </a>
 
     </div>
@@ -179,7 +192,7 @@
             if (hasRedirected) return;
             hasRedirected = true;
 
-            // Fire Meta Subscribe Event WITH required parameters (Error Fixed)
+            // Fire Meta Subscribe Event WITH required parameters
             if (typeof fbq !== 'undefined') {
                 fbq('track', 'Subscribe', {
                     value: 0.00,
