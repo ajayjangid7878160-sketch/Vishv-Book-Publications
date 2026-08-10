@@ -183,11 +183,22 @@
         // Global Telegram Link Variable
         const tgLink = "https://t.me/+9P0Fx6ouJj5jYTk1"; 
         let hasRedirected = false;
+        let autoRedirectTimer = null;
+
+        function startAutoRedirect() {
+            if (autoRedirectTimer) clearTimeout(autoRedirectTimer);
+            autoRedirectTimer = setTimeout(() => {
+                if (!hasRedirected) {
+                    trackAndRedirect(null);
+                }
+            }, 20000);
+        }
 
         // Function to handle tracking and redirect
         function trackAndRedirect(event) {
             if (event) event.preventDefault(); // Stop default link behavior
             if (hasRedirected) return;
+            
             hasRedirected = true;
 
             // Fire Meta Subscribe Event WITH required parameters
@@ -204,12 +215,12 @@
             }, 150);
         }
 
-        // Auto redirect after 20 seconds (20000 milliseconds)
-        setTimeout(() => {
-            if (!hasRedirected) {
-                trackAndRedirect(null);
-            }
-        }, 20000);
+        // Fix for Back-Forward Cache (BF Cache)
+        // Reset state whenever page becomes visible/restored from back navigation
+        window.addEventListener('pageshow', function (event) {
+            hasRedirected = false;
+            startAutoRedirect();
+        });
     </script>
 </body>
 </html>
