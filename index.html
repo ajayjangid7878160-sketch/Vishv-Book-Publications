@@ -67,15 +67,163 @@
         .animate-pulse-subtle {
             animation: pulse-subtle 2s infinite ease-in-out;
         }
+
+        /* ===== Universal Mobile Responsive Fix ===== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            width: 100%;
+            overflow-x: hidden;
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+
+        body {
+            width: 100%;
+            min-width: 0;
+            overflow-x: hidden;
+        }
+
+        .page-card {
+            width: min(100%, 420px);
+            min-width: 0;
+        }
+
+        @media (max-width: 420px) {
+            body {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+            }
+
+            .page-card {
+                padding: 18px !important;
+                border-radius: 24px !important;
+            }
+
+            .top-badges {
+                gap: 6px !important;
+            }
+
+            .top-badges > span {
+                min-width: 0;
+                padding-left: 8px !important;
+                padding-right: 8px !important;
+                font-size: 10px !important;
+            }
+
+            .main-title,
+            .salary-title {
+                font-size: clamp(30px, 9.5vw, 40px) !important;
+                line-height: 1.05 !important;
+                overflow-wrap: anywhere;
+            }
+
+            .job-title {
+                font-size: clamp(21px, 6.5vw, 28px) !important;
+                line-height: 1.1 !important;
+            }
+
+            .description {
+                font-size: 12px !important;
+            }
+
+            .feature-grid {
+                gap: 7px !important;
+            }
+
+            .feature-grid > div {
+                padding-left: 7px !important;
+                padding-right: 7px !important;
+                font-size: 10px !important;
+            }
+
+            .cta-button {
+                min-height: 52px;
+                padding: 12px 12px !important;
+                font-size: 14px !important;
+                line-height: 1.2 !important;
+            }
+
+            .proof-banner {
+                font-size: 10px !important;
+                gap: 7px !important;
+            }
+
+            .pricing-card {
+                padding: 12px !important;
+            }
+
+            .pricing-card .row-label {
+                font-size: 11px !important;
+            }
+
+            .pricing-card .row-value {
+                font-size: 14px !important;
+            }
+
+            .highlights {
+                column-gap: 8px !important;
+            }
+
+            .highlight-item {
+                min-width: 0;
+            }
+
+            .highlight-item span {
+                font-size: 10px !important;
+            }
+        }
+
+        @media (max-width: 340px) {
+            body {
+                padding-left: 7px !important;
+                padding-right: 7px !important;
+            }
+
+            .page-card {
+                padding: 14px !important;
+            }
+
+            .top-badges {
+                flex-direction: column !important;
+            }
+
+            .top-badges > span {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .main-title,
+            .salary-title {
+                font-size: 29px !important;
+            }
+
+            .cta-button {
+                font-size: 13px !important;
+            }
+        }
+
+        @media (min-width: 421px) {
+            .page-card {
+                width: min(100%, 420px);
+            }
+        }
+
     </style>
 </head>
 <body class="bg-slate-100 pt-3 pb-6 px-3">
 
     <!-- Card Wrapper -->
-    <div class="bg-white rounded-3xl shadow-lg border border-slate-100 max-w-sm w-full mx-auto p-5 sm:p-6 flex flex-col items-center text-center space-y-4">
+    <div class="page-card bg-white rounded-3xl shadow-lg border border-slate-100 mx-auto p-5 sm:p-6 flex flex-col items-center text-center space-y-4">
         
         <!-- Top Badges -->
-        <div class="flex flex-row flex-nowrap justify-center items-center gap-2 w-full">
+        <div class="top-badges flex flex-row flex-nowrap justify-center items-center gap-2 w-full">
             <span class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold text-blue-600 bg-blue-50 border border-blue-200 whitespace-nowrap">
                 <i data-lucide="sparkles" class="w-3.5 h-3.5 text-blue-500 shrink-0"></i> Genuine Work From Home
             </span>
@@ -86,24 +234,24 @@
 
         <!-- Headings (Text Size Increased) -->
         <div class="space-y-1 w-full pt-1">
-            <h1 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+            <h1 class="main-title text-4xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
                 Ghar Baithe Kamao
             </h1>
-            <p class="text-4xl sm:text-5xl font-black text-blue-600 tracking-tight leading-tight pt-1">
+            <p class="salary-title text-4xl sm:text-5xl font-black text-blue-600 tracking-tight leading-tight pt-1">
                 ₹25,000 – ₹35,000
             </p>
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800 flex items-center justify-center gap-1 pt-1.5">
+            <h2 class="job-title text-2xl sm:text-3xl font-extrabold text-slate-800 flex items-center justify-center gap-1 pt-1.5">
                 Handwriting Job ✍️
             </h2>
         </div>
 
         <!-- Description -->
-        <p class="text-xs sm:text-sm font-medium text-slate-500 max-w-xs leading-relaxed">
+        <p class="description text-xs sm:text-sm font-medium text-slate-500 max-w-xs leading-relaxed">
             Simple copywriting kaam. No experience needed. Blank pages ghar aayenge, aap likh ke bhejo, paisa UPI me.
         </p>
 
         <!-- Feature Badges -->
-        <div class="grid grid-cols-2 gap-2.5 w-full pt-1">
+        <div class="feature-grid grid grid-cols-2 gap-2.5 w-full pt-1">
             <div class="flex items-center justify-center gap-1.5 px-3 py-2 rounded-full text-xs sm:text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 whitespace-nowrap">
                 <i data-lucide="circle-check-big" class="w-4 h-4 text-emerald-600 shrink-0"></i> 50% Advance
             </div>
@@ -117,13 +265,13 @@
         </div>
 
         <!-- CTA Button 1 -->
-        <a href="#" onclick="trackAndRedirect(event)" class="btn-shine animate-pulse-subtle w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-5 rounded-full shadow-md shadow-blue-500/20 transition duration-200 group text-base">
+        <a href="#" onclick="trackAndRedirect(event)" class="cta-button btn-shine animate-pulse-subtle w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-5 rounded-full shadow-md shadow-blue-500/20 transition duration-200 group text-base">
             <i data-lucide="send" class="w-5 h-5 fill-white shrink-0"></i> Apply Now on Telegram 
             <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1 shrink-0"></i>
         </a>
 
         <!-- Proof Banner -->
-        <div class="flex items-center justify-center gap-2.5 w-full text-xs font-medium text-slate-500 py-0.5">
+        <div class="proof-banner flex items-center justify-center gap-2.5 w-full text-xs font-medium text-slate-500 py-0.5">
             <div class="flex -space-x-1.5 shrink-0">
                 <span class="w-5 h-5 rounded-full bg-pink-500 text-white flex items-center justify-center font-bold border border-white text-[9px]">P</span>
                 <span class="w-5 h-5 rounded-full bg-amber-500 text-white flex items-center justify-center font-bold border border-white text-[9px]">S</span>
@@ -134,43 +282,43 @@
         </div>
 
         <!-- Pricing Card -->
-        <div class="w-full border border-blue-200 bg-blue-50/30 rounded-2xl p-3.5 divide-y divide-blue-100">
-            <div class="flex justify-between items-center pb-2.5">
-                <div class="flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-800">
+        <div class="pricing-card w-full border border-blue-200 bg-blue-50/30 rounded-2xl p-3.5 divide-y divide-blue-100">
+            <div class="row flex justify-between items-center pb-2.5">
+                <div class="row-label flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-800">
                     💰 <span>Weekly Payment</span>
                 </div>
-                <span class="text-sm sm:text-base font-bold text-blue-600">₹25,000</span>
+                <span class="row-value text-sm sm:text-base font-bold text-blue-600">₹25,000</span>
             </div>
-            <div class="flex justify-between items-center pt-2.5">
-                <div class="flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-800">
+            <div class="row flex justify-between items-center pt-2.5">
+                <div class="row-label flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-800">
                     💰 <span>10 Days Payment</span>
                 </div>
-                <span class="text-sm sm:text-base font-bold text-blue-600">₹30,000</span>
+                <span class="row-value text-sm sm:text-base font-bold text-blue-600">₹30,000</span>
             </div>
         </div>
 
         <!-- Grid Highlights -->
-        <div class="grid grid-cols-2 gap-y-3 gap-x-2 w-full text-left px-1 py-1">
-            <div class="flex items-center gap-2">
+        <div class="highlights grid grid-cols-2 gap-y-3 gap-x-2 w-full text-left px-1 py-1">
+            <div class="highlight-item flex items-center gap-2">
                 <i data-lucide="indian-rupee" class="w-4 h-4 text-emerald-600 shrink-0"></i>
                 <span class="text-xs font-bold text-slate-800">₹2.5 Cr+ Paid</span>
             </div>
-            <div class="flex items-center gap-2">
+            <div class="highlight-item flex items-center gap-2">
                 <i data-lucide="users" class="w-4 h-4 text-blue-600 shrink-0"></i>
                 <span class="text-xs font-bold text-slate-800">1000+ Writers</span>
             </div>
-            <div class="flex items-center gap-2">
+            <div class="highlight-item flex items-center gap-2">
                 <i data-lucide="shield-check" class="w-4 h-4 text-orange-500 shrink-0"></i>
                 <span class="text-xs font-bold text-slate-800">Govt. Approved</span>
             </div>
-            <div class="flex items-center gap-2">
+            <div class="highlight-item flex items-center gap-2">
                 <i data-lucide="lock" class="w-4 h-4 text-purple-600 shrink-0"></i>
                 <span class="text-xs font-bold text-slate-800">100% Safe</span>
             </div>
         </div>
 
         <!-- CTA Button 2 -->
-        <a href="#" onclick="trackAndRedirect(event)" class="btn-shine animate-pulse-subtle w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-5 rounded-full shadow-md shadow-blue-500/20 transition duration-200 group text-base">
+        <a href="#" onclick="trackAndRedirect(event)" class="cta-button btn-shine animate-pulse-subtle w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-5 rounded-full shadow-md shadow-blue-500/20 transition duration-200 group text-base">
             <i data-lucide="send" class="w-5 h-5 fill-white shrink-0"></i> Apply Now — Get ₹30,000 
             <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1 shrink-0"></i>
         </a>
