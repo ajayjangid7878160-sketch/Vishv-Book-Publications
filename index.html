@@ -1856,10 +1856,6 @@
         }
       }
 
-      // Fire PageView image beacon on load to ensure absolute tracking coverage
-      const imgPageView = new Image();
-      imgPageView.src = "https://www.facebook.com/tr?id=2038909316750780&ev=PageView&noscript=1&r=" + Math.random();
-
       // Track all direct clicks on anchor links pointing to t.me
       document.addEventListener('click', function(e) {
         const anchor = e.target.closest('a');
